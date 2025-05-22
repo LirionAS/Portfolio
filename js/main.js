@@ -48,6 +48,9 @@ navLinks.forEach(link => {
 // Proje Filtreleme
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
+        // Proje öğelerini her tıklamada yeniden seç
+        const projectItems = document.querySelectorAll('.project-item');
+        
         // Aktif sınıfını kaldır
         filterBtns.forEach(btn => {
             btn.classList.remove('active');

@@ -536,3 +536,60 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* Hakkımda - Bilgi Kutuları Stilleri */
+.about-info {
+    display: flex;
+    justify-content: space-between; /* Eşit aralıklarla dağıt */
+    gap: 20px; /* Kutular arası boşluk */
+    margin-top: 30px;
+}
+
+.about-info .info-item {
+    background-color: #f9f9f9; /* Açık gri arka plan */
+    padding: 25px;
+    border-radius: 10px; /* Yuvarlak köşeler */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    text-align: center; /* İçeriği ortala */
+    flex-basis: 48%; /* Her kutu için genişlik (aradaki boşlukla beraber %100'e yakın) */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Yumuşak geçiş efekti */
+}
+
+.about-info .info-item:hover {
+    transform: translateY(-5px); /* Üzerine gelince hafif yukarı kalkma efekti */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Daha belirgin gölge */
+}
+
+.about-info .info-item h4 {
+    font-size: 1.4em; /* Başlık font boyutu */
+    color: #333; /* Koyu gri başlık rengi */
+    margin-bottom: 15px;
+    display: flex; /* İkon ve metni yan yana getirmek için */
+    align-items: center; /* Dikeyde ortala */
+    justify-content: center; /* Yatayda ortala */
+}
+
+.about-info .info-item h4 i {
+    margin-right: 10px; /* İkon ve metin arası boşluk */
+    color: var(--primary-color); /* Ana renk (style.css dosyasındaki değişkenden) */
+    font-size: 1.2em; /* İkon boyutu */
+}
+
+.about-info .info-item p {
+    font-size: 1em;
+    color: #555; /* Orta gri metin rengi */
+    line-height: 1.6;
+}
+
+/* Mobil Cihazlar İçin Ayarlamalar */
+@media (max-width: 768px) {
+    .about-info {
+        flex-direction: column; /* Kutuları alt alta sırala */
+    }
+    .about-info .info-item {
+        flex-basis: 100%; /* Tam genişlik */
+        margin-bottom: 20px; /* Alt alta sıralandığında aralarında boşluk */
+    }
+    .about-info .info-item:last-child {
+        margin-bottom: 0;
+    }
+}
