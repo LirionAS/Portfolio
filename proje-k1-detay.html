@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K1 Modelleme Projesi - Furkan Karaçoban</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .project-detail-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/proje-k1-banner.jpg') no-repeat center center/cover; /* Projeye özel bir banner görseli */
+            height: 50vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .project-detail-hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+        }
+        .project-detail-section {
+            padding: 60px 0;
+        }
+        .project-detail-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .project-detail-container img.main-project-image {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .project-detail-container h2 {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .project-detail-container p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #555;
+        }
+        .project-detail-container .tech-stack {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        .project-detail-container .tech-stack span {
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin-right: 8px;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .project-gallery img {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            cursor: pointer; /* Lightbox için eklenebilir */
+        }
+        .back-link-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigasyon -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Furkan Karaçoban Logo" class="logo-img"></a>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html#anasayfa">Ana Sayfa</a></li>
+                <li><a href="index.html#hakkimda">Hakkımda</a></li>
+                <li><a href="index.html#projeler">Projeler</a></li>
+                <li><a href="index.html#yetenekler">Yetenekler</a></li>
+                <li><a href="index.html#iletisim">İletişim</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Proje Detay Hero Alanı -->
+    <section class="project-detail-hero">
+        <h1>K1 Modelleme Projesi</h1>
+    </section>
+
+    <!-- Proje Detay İçeriği -->
+    <section class="project-detail-section">
+        <div class="project-detail-container">
+            <img src="img/proje-k1-modelleme.png" alt="K1 Modelleme Projesi Ana Görsel" class="main-project-image">
+
+            <h2>Proje Genel Bakış</h2>
+            <p>Bu proje, Blender yazılımı kullanılarak yüksek detaylı bir "K1" adlı karakterin 3D modellemesini içermektedir. Model, oyun geliştirme ve animasyon projelerinde kullanılmak üzere optimize edilmiştir. Projede, karakterin anatomik yapısına, giysilerine ve aksesuarlarına özen gösterilmiştir.</p>
+            <p>Modelleme sürecinde low-poly ve high-poly teknikleri bir arada kullanılmış, PBR (Physically Based Rendering) materyaller ile gerçekçi bir görünüm hedeflenmiştir.</p>
+
+            <h2>Kullanılan Teknolojiler ve Araçlar</h2>
+            <div class="tech-stack">
+                <span>Blender</span>
+                <span>Substance Painter</span>
+                <span>ZBrush (Opsiyonel Detaylandırma)</span>
+                <span>Photoshop</span>
+                <span>Marmoset Toolbag (Render)</span>
+            </div>
+
+            <h2>Proje Detayları ve Süreci</h2>
+            <p><strong>Konsept ve Referans Toplama:</strong> Projeye başlarken karakter için çeşitli konsept tasarımları incelenmiş ve referans görseller toplanmıştır.</p>
+            <p><strong>Bloklama ve Temel Modelleme:</strong> Karakterin temel formları ve oranları Blender'da bloklanarak oluşturulmuştur.</p>
+            <p><strong>Detaylı Modelleme (Sculpting):</strong> Giysi kıvrımları, yüz detayları gibi ince ayrıntılar sculpting araçları ile eklenmiştir.</p>
+            <p><strong>Retopoloji ve UV Açma:</strong> Animasyon ve performans için optimize edilmiş bir mesh yapısı (retopoloji) oluşturulmuş ve UV haritaları açılmıştır.</p>
+            <p><strong>Doku (Texturing):</strong> Substance Painter kullanılarak karakterin detaylı PBR dokuları (renk, metaliklik, pürüzlülük, normal haritaları vb.) hazırlanmıştır.</p>
+            <p><strong>Rigging ve Skinning (Opsiyonel):</strong> Karakterin animasyona hazır hale getirilmesi için iskelet sistemi (rig) eklenmiş ve mesh bu iskelete bağlanmıştır (skinning).</p>
+            <p><strong>Sunum ve Render:</strong> Model, Marmoset Toolbag veya Blender Cycles/Eevee kullanılarak çeşitli açılardan render alınarak sunulmuştur.</p>
+            
+            <h2>Ek Proje Görselleri</h2>
+            <div class="project-gallery">
+                <img src="img/proje-k1-detay-01.jpg" alt="K1 Model Detay 1">
+                <img src="img/proje-k1-detay-02.jpg" alt="K1 Model Detay 2">
+                <img src="img/proje-k1-wireframe.png" alt="K1 Model Wireframe">
+                <!-- Daha fazla görsel eklenebilir -->
+            </div>
+
+            <div class="back-link-container">
+                <a href="index.html#projeler" class="btn"><i class="fas fa-arrow-left"></i> Tüm Projelere Geri Dön</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Furkan Karaçoban. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script> <!-- Hamburger menü gibi işlevler için -->
+</body>
+</html>
