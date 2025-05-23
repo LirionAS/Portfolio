@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Animasyon Projesi - Furkan Karaçoban</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .project-detail-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/mars-banner-placeholder.jpg') no-repeat center center/cover; /* Projeye özel bir banner görseli (placeholder) */
+            height: 50vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .project-detail-hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+        }
+        .project-detail-section {
+            padding: 60px 0;
+        }
+        .project-detail-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Ana görsel için stil css/style.css dosyasından gelecek */
+        .project-detail-container h2 {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .project-detail-container p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #555;
+        }
+        .project-detail-container .tech-stack {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        .project-detail-container .tech-stack span {
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin-right: 8px;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .project-gallery img {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            cursor: pointer;
+        }
+        .back-link-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigasyon -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Furkan Karaçoban Logo" class="logo-img"></a>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html#anasayfa">Ana Sayfa</a></li>
+                <li><a href="index.html#hakkimda">Hakkımda</a></li>
+                <li><a href="index.html#projeler">Projeler</a></li>
+                <li><a href="index.html#yetenekler">Yetenekler</a></li>
+                <li><a href="index.html#iletisim">İletişim</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Proje Detay Hero Alanı -->
+    <section class="project-detail-hero">
+        <h1>Mars Animasyon Projesi</h1>
+    </section>
+
+    <!-- Proje Detay İçeriği -->
+    <section class="project-detail-section">
+        <div class="project-detail-container">
+            <!-- Ana görsel veya video buraya eklenecek -->
+            <div class="video-container main-project-image" style="margin-bottom: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+                <video width="100%" controls autoplay loop muted playsinline>
+                    <source src="img/mars.mp4" type="video/mp4">
+                    Tarayıcınız video etiketini desteklemiyor.
+                </video>
+            </div>
+
+            <h2>Proje Genel Bakış</h2>
+            <p>Bu proje, Unreal Engine kullanılarak oluşturulmuş, Mars yüzeyini ve atmosferini gerçekçi bir şekilde yansıtan bir animasyon ve görsel efekt çalışmasıdır. Proje, gezegen keşfi ve bilim kurgu temalarını bir araya getirerek etkileyici bir görsel deneyim sunmayı amaçlamaktadır.</p>
+            <p>Çalışma, detaylı arazi modellemesi, atmosferik efektler, ışıklandırma ve kamera animasyonlarını içermektedir.</p>
+
+            <h2>Kullanılan Teknolojiler ve Araçlar</h2>
+            <div class="tech-stack">
+                <span>Unreal Engine (Sahne Oluşturma, Animasyon, Render)</span>
+                <span>Blender (Asset Modelleme, Doku)</span>
+                <span>Adobe After Effects (Post Prodüksiyon, Ek Efektler)</span>
+                <span>Substance Painter (Detaylı Doku Çalışmaları)</span>
+            </div>
+
+            <h2>Proje Detayları ve Süreci</h2>
+            <p><strong>Konsept ve Araştırma:</strong> Mars'ın jeolojik yapısı, atmosferi ve ışık koşulları hakkında detaylı araştırmalar yapıldı. Projenin genel atmosferi ve anlatmak istediği hikaye için konsept tasarımlar oluşturuldu.</p>
+            <p><strong>Arazi Modelleme ve Doku:</strong> Unreal Engine'in arazi araçları ve Blender kullanılarak Mars yüzeyinin detaylı modelleri oluşturuldu. Gerçekçi kaya, kum ve krater dokuları Substance Painter ile hazırlandı.</p>
+            <p><strong>Atmosfer ve Işıklandırma:</strong> Unreal Engine içinde Mars'ın ince atmosferi, toz fırtınaları ve gün batımı gibi karakteristik özellikleri simüle edildi. Dinamik ışıklandırma ve gölgelendirme teknikleri kullanıldı.</p>
+            <p><strong>Animasyon:</strong> Kamera hareketleri, varsa araç veya karakter animasyonları Unreal Engine Sequencer kullanılarak oluşturuldu.</p>
+            <p><strong>Görsel Efektler (VFX):</strong> Toz efektleri, lens parlamaları ve diğer atmosferik detaylar After Effects ve Unreal Engine Niagara kullanılarak eklendi.</p>
+            <p><strong>Render ve Post Prodüksiyon:</strong> Yüksek kaliteli renderlar alındıktan sonra Adobe After Effects'te renk düzenlemesi, kompozisyon ve son rötuşlar yapıldı.</p>
+
+            <div class="back-link-container">
+                <a href="index.html#projeler" class="btn"><i class="fas fa-arrow-left"></i> Tüm Projelere Geri Dön</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Furkan Karaçoban. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

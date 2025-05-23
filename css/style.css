@@ -593,3 +593,65 @@ footer {
         margin-bottom: 0;
     }
 }
+/* ===== Proje Detay Sayfaları Ana Görsel ===== */
+.project-detail-container img.main-project-image {
+    width: 45%; /* Genişlik ayarlandı, metin için yer bırakıldı */
+    float: left;
+    margin-right: 30px; /* Görselin sağına boşluk */
+    margin-bottom: 15px; /* Alt boşluk ayarlandı */
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Float içeren .project-detail-container için clearfix */
+.project-detail-container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/* ===== Proje Galerisi Stilleri ===== */
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Yan yana 3 veya daha fazla görsel sığdırır */
+    gap: 15px; /* Görseller arası boşluk */
+    margin-top: 30px;
+    margin-bottom: 30px; /* Alt navigasyon butonu ile arasında boşluk */
+}
+
+.project-gallery img {
+    width: 100%; /* Genişliği tekrar %100 yaptık */
+    height: 200px; /* Görsel yüksekliği sabitlendi */
+    aspect-ratio: 1 / 1; /* Görselleri kare yapar */
+    object-fit: cover; /* Görselin orantısını koruyarak alanı kaplamasını sağlar */
+    border-radius: 8px; /* Köşeleri yuvarlatır */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Hafif gölge efekti */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Yumuşak geçiş */
+}
+
+.project-gallery img:hover {
+    transform: scale(1.05); /* Üzerine gelince hafif büyütme efekti */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Daha belirgin gölge */
+}
+
+/* Proje Detay Sayfası Başlık Stili (Ek Görseller için) */
+.project-detail-container .project-gallery-title {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--primary-color);
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.project-detail-container .project-gallery-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+}
