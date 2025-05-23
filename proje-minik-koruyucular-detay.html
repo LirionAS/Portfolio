@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minik Koruyucular - Kısa Film Projesi - Furkan Karaçoban</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .project-detail-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/minik-koruyucular-banner.jpg') no-repeat center center/cover; /* Projeye özel bir banner görseli */
+            height: 50vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .project-detail-hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+        }
+        .project-detail-section {
+            padding: 60px 0;
+        }
+        .project-detail-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .project-detail-container img.main-project-image {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .project-detail-container h2 {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .project-detail-container p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #555;
+        }
+        .project-detail-container .tech-stack {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        .project-detail-container .tech-stack span {
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin-right: 8px;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .project-gallery img {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            cursor: pointer; /* Lightbox için eklenebilir */
+        }
+        .back-link-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigasyon -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Furkan Karaçoban Logo" class="logo-img"></a>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html#anasayfa">Ana Sayfa</a></li>
+                <li><a href="index.html#hakkimda">Hakkımda</a></li>
+                <li><a href="index.html#projeler">Projeler</a></li>
+                <li><a href="index.html#yetenekler">Yetenekler</a></li>
+                <li><a href="index.html#iletisim">İletişim</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Proje Detay Hero Alanı -->
+    <section class="project-detail-hero">
+        <h1>Minik Koruyucular</h1>
+    </section>
+
+    <!-- Proje Detay İçeriği -->
+    <section class="project-detail-section">
+        <div class="project-detail-container">
+            <!-- Kısa Film Videosu (Örnek YouTube Embed Kodu) -->
+            <!-- <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_BURAYA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> -->
+            <img src="img/minik-koruyucular-detay-02.png" alt="Minik Koruyucular Ana Görsel" class="main-project-image"> <!-- Ana görseli veya filmden bir kareyi buraya koyabilirsiniz -->
+
+            <h2>Proje Genel Bakış</h2>
+            <p>"Minik Koruyucular", bitirme projesi olarak hazırladığım bir kısa animasyon filmidir. Bu film, fantastik bir dünyada geçen, sevimli karakterlerin maceralarını ve dostluklarını konu almaktadır. Proje, hikaye anlatımından karakter tasarımına, 3D modellemeden animasyona ve son olarak post prodüksiyon aşamalarına kadar tüm süreçleri kapsamaktadır.</p>
+            <p>Filmin amacı, hem teknik becerilerimi sergilemek hem de izleyicilere keyifli ve duygusal bir deneyim sunmaktır.</p>
+
+            <h2>Kullanılan Teknolojiler ve Araçlar</h2>
+            <div class="tech-stack">
+                <span>Blender (Modelleme, Rigging, Animasyon, Render)</span>
+                <span>Adobe After Effects (Compositing, Post Prodüksiyon)</span>
+                <span>Adobe Premiere Pro (Kurgu)</span>
+                <span>Adobe Photoshop (Doku, Konsept Tasarım)</span>
+                <span>Substance Painter (Doku)</span>
+            </div>
+
+            <h2>Proje Detayları ve Süreci</h2>
+            <p><strong>Senaryo ve Storyboard:</strong> Filmin hikayesi oluşturuldu ve sahneler storyboard ile görselleştirildi.</p>
+            <p><strong>Karakter ve Çevre Tasarımı:</strong> Filmin ana karakterleri ve geçeceği mekanlar için konsept tasarımlar yapıldı.</p>
+            <p><strong>3D Modelleme:</strong> Karakterler, objeler ve çevreler Blender kullanılarak 3D olarak modellendi.</p>
+            <p><strong>Doku (Texturing):</strong> Modellerin yüzeylerine Substance Painter ve Photoshop kullanılarak detaylı dokular eklendi.</p>
+            <p><strong>Rigging:</strong> Karakterlerin hareket edebilmesi için Blender'da iskelet sistemleri (rig) oluşturuldu.</p>
+            <p><strong>Animasyon:</strong> Karakterlere ve objelere Blender'da hayat verildi, animasyonlar oluşturuldu.</p>
+            <p><strong>Işıklandırma ve Render:</strong> Sahneler Blender Cycles/Eevee kullanılarak ışıklandırıldı ve render alındı.</p>
+            <p><strong>Compositing ve Post Prodüksiyon:</strong> Render alınan görüntüler After Effects'te birleştirildi, renk düzenlemeleri yapıldı ve görsel efektler eklendi.</p>
+            <p><strong>Kurgu ve Ses Tasarımı:</strong> Filmin kurgusu Premiere Pro'da yapıldı, ses efektleri ve müzik eklendi.</p>
+            
+            <h2>Ek Proje Görselleri</h2>
+            <div class="project-gallery">
+                <img src="img/minik-koruyucular-detay-01.png" alt="Minik Koruyucular Sahne 1">
+                <img src="img/minik-koruyucular-detay-02.png" alt="Minik Koruyucular Karakter Modelleme">
+                <img src="img/minik-koruyucular-storyboard.png" alt="Minik Koruyucular Storyboard Örneği">
+                <!-- Daha fazla görsel veya video linki eklenebilir -->
+            </div>
+
+            <div class="back-link-container">
+                <a href="index.html#projeler" class="btn"><i class="fas fa-arrow-left"></i> Tüm Projelere Geri Dön</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Furkan Karaçoban. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
