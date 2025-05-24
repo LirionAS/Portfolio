@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stilize Şeker Dükkanı Modelleme Projesi - Furkan Karaçoban</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .project-detail-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/proje-seker-dukkani-banner.jpg') no-repeat center center/cover; /* Projeye özel bir banner görseli */
+            height: 50vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .project-detail-hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+        }
+        .project-detail-section {
+            padding: 60px 0;
+        }
+        .project-detail-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .project-detail-container img.main-project-image {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .project-detail-container h2 {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .project-detail-container p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #555;
+        }
+        .project-detail-container .tech-stack {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        .project-detail-container .tech-stack span {
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin-right: 8px;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .project-gallery img {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            cursor: pointer; /* Lightbox için eklenebilir */
+        }
+        .back-link-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigasyon -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Furkan Karaçoban Logo" class="logo-img"></a>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html#anasayfa">Ana Sayfa</a></li>
+                <li><a href="index.html#hakkimda">Hakkımda</a></li>
+                <li><a href="index.html#projeler">Projeler</a></li>
+                <li><a href="index.html#yetenekler">Yetenekler</a></li>
+                <li><a href="index.html#iletisim">İletişim</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Proje Detay Hero Alanı -->
+    <section class="project-detail-hero">
+        <h1>Stilize Şeker Dükkanı Modelleme</h1>
+    </section>
+
+    <!-- Proje Detay İçeriği -->
+    <section class="project-detail-section">
+        <div class="project-detail-container">
+            <img src="img/seker.png" alt="Stilize Şeker Dükkanı Modelleme Ana Görsel" class="main-project-image">
+
+            <h2>Proje Genel Bakış</h2>
+            <p>Bu proje, Blender kullanılarak oluşturulmuş, canlı renklere ve eğlenceli bir tasarıma sahip stilize bir şeker dükkanının 3D modellemesini içermektedir. Model, oyunlar, veya animasyonlar için kullanılabilir.</p>
+            <p>Modelleme sürecinde low-poly yaklaşımı benimsenmiş, dokularla modele özgün bir görünüm kazandırılmıştır.</p>
+
+            <h2>Kullanılan Teknolojiler ve Araçlar</h2>
+            <div class="tech-stack">
+                <span>Blender</span>
+            </div>
+
+            <h2>Proje Detayları ve Süreci</h2>
+            <p><strong>Konsept ve Referans Toplama:</strong> Projeye başlarken çeşitli şeker dükkanı konseptleri, renk paletleri ve stilize mimari örnekleri incelenmiştir.</p>
+            <p><strong>Bloklama ve Temel Modelleme:</strong> Dükkanın ana yapısı ve vitrinleri gibi temel geometriler Blender'da oluşturulmuştur.</p>
+            <p><strong>Detay Modelleme:</strong> Şeker kavanozları, lolipoplar, pastalar gibi dükkan içindeki ve dışındaki detay objeler modellenmiştir.</p>
+            <p><strong>UV Açma:</strong> Tüm modellerin UV haritaları, doku boyama işlemi için özenle açılmıştır.</p>
+            <p><strong>Doku (Texturing):</strong> Blender'ın kendi doku boyama araçları kullanılarak modellere canlı ve stilize dokular eklenmiştir.</p>
+            <p><strong>Sahne Düzenlemesi ve Işıklandırma:</strong> Modeller bir araya getirilerek sahne oluşturulmuş, uygun ışıklandırma ile atmosfer güçlendirilmiştir.</p>
+            <p><strong>Sunum ve Render:</strong> Model, Blender Eevee render alınarak sunulmuştur.</p>
+            
+            <h2>Proje Videosu</h2>
+            <div class="project-video" style="margin-top: 30px; margin-bottom: 30px;">
+                <video width="100%" controls style="border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                    <source src="img/seker.mp4" type="video/mp4">
+                    Tarayıcınız video etiketini desteklemiyor.
+                </video>
+            </div>
+
+            <div class="back-link-container">
+                <a href="index.html#projeler" class="btn"><i class="fas fa-arrow-left"></i> Tüm Projelere Geri Dön</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Furkan Karaçoban. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script> <!-- Hamburger menü gibi işlevler için -->
+</body>
+</html>
