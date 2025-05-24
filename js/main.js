@@ -66,18 +66,24 @@ filterBtns.forEach(btn => {
         projectItems.forEach(item => {
             const categories = item.getAttribute('data-category').split(' ');
             
+            // Animasyon için küçük bir gecikme
             if (filterValue === 'all' || categories.includes(filterValue)) {
+                item.style.transitionDelay = Math.random() * 0.2 + 's'; // Rastgele gecikme
                 item.style.display = 'block';
-                setTimeout(() => {
-                    item.style.opacity = '1';
-                    item.style.transform = 'scale(1)';
-                }, 200);
+                // Display block sonrası kısa bir bekleme, opacity ve transform için
+                requestAnimationFrame(() => {
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1) translateY(0px)';
+                    }, 20); // CSS geçişinin başlaması için çok kısa bir bekleme
+                });
             } else {
+                item.style.transitionDelay = '0s';
                 item.style.opacity = '0';
-                item.style.transform = 'scale(0.8)';
+                item.style.transform = 'scale(0.95) translateY(10px)'; // Biraz daha yumuşak küçülme
                 setTimeout(() => {
                     item.style.display = 'none';
-                }, 500);
+                }, 400); // CSS transition süresiyle uyumlu (0.4s)
             }
         });
     });
@@ -89,10 +95,11 @@ window.addEventListener('scroll', () => {
     
     // Bölümlerin görünürlüğünü kontrol et
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
+        const sectionTop = section.offsetTop - 150; // Biraz daha erken tetiklenmesi için değeri artırdım
         const sectionHeight = section.offsetHeight;
         const sectionId = section.getAttribute('id');
-        
+        const sectionTitle = section.querySelector('.section-title');
+
         if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
             // İlgili menü linkini aktif et
             navLinks.forEach(link => {
@@ -101,9 +108,18 @@ window.addEventListener('scroll', () => {
                     link.classList.add('active');
                 }
             });
-            
+
             // Bölüm görünür olduğunda animasyon ekle
             section.classList.add('in-view');
+            if (sectionTitle) {
+                sectionTitle.classList.add('in-view');
+            }
+        } else {
+            // Bölüm görünür olmadığında animasyon sınıfını kaldır (opsiyonel, tekrar animasyon için)
+            // section.classList.remove('in-view');
+            // if (sectionTitle) {
+            //     sectionTitle.classList.remove('in-view');
+            // }
         }
     });
     

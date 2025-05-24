@@ -56,20 +56,40 @@ img {
     padding: 12px 30px;
     background: var(--primary-color);
     color: white;
-    border: none;
-    border-radius: 5px;
+    border: 2px solid var(--primary-color); /* Kenarlık eklendi */
+    border-radius: 50px; /* Daha yuvarlak kenarlar */
     cursor: pointer;
-    transition: var(--transition);
+    transition: var(--transition), background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Daha fazla geçiş özelliği */
     font-weight: 600;
     text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 1px;
+    position: relative; /* Animasyon için */
+    overflow: hidden; /* Animasyon için */
+    z-index: 1; /* Animasyon için */
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    transition: width 0.3s ease;
+    z-index: -1;
+    border-radius: 50px;
 }
 
 .btn:hover {
-    background: #0062cc;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    color: var(--primary-color); /* Metin rengi ana renge dönecek */
+    transform: translateY(-5px) scale(1.05); /* Biraz daha belirgin hareket ve büyüme */
+    box-shadow: 0 12px 25px rgba(0, 123, 255, 0.3); /* Daha belirgin ve renkli gölge */
+}
+
+.btn:hover::before {
+    width: 100%;
 }
 
 .section-title {
@@ -86,10 +106,16 @@ img {
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: var(--primary-color);
+    transform: translateX(-50%) scaleX(0); /* Başlangıçta görünmez */
+    width: 100px; /* Genişlik artırıldı */
+    height: 5px; /* Kalınlık artırıldı */
+    background: linear-gradient(90deg, var(--primary-color), #6610f2); /* Gradient eklendi */
+    border-radius: 2px; /* Hafif yuvarlaklık */
+    transition: transform 0.5s ease-out; /* Yumuşak geçiş */
+}
+
+.section-title.in-view::after { /* .in-view sınıfı JS ile eklenecek */
+    transform: translateX(-50%) scaleX(1); /* Görünür hale getirme */
 }
 
 section {
@@ -302,14 +328,24 @@ section {
 
 .project-item {
     background: white;
-    border-radius: 10px;
+    border-radius: 15px; /* Daha yuvarlak köşeler */
     overflow: hidden;
-    box-shadow: var(--box-shadow);
-    transition: var(--transition);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* Biraz daha yumuşak gölge */
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Daha yumuşak geçiş */
+    position: relative; /* İçerik için */
 }
 
 .project-item:hover {
-    transform: translateY(-10px);
+    transform: translateY(-12px) scale(1.03); /* Daha belirgin hareket ve hafif büyüme */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12); /* Daha belirgin gölge */
+}
+
+.project-item .project-img img {
+    transition: transform 0.4s ease;
+}
+
+.project-item:hover .project-img img {
+    transform: scale(1.1); /* Resim üzerine gelince hafif zoom */
 }
 
 .project-img {
@@ -334,12 +370,30 @@ section {
 .project-link {
     display: inline-block;
     color: var(--primary-color);
-    font-weight: 600;
-    transition: var(--transition);
+    font-weight: 700; /* Daha kalın */
+    transition: var(--transition), letter-spacing 0.3s ease; /* Harf aralığı geçişi eklendi */
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.project-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
 }
 
 .project-link:hover {
-    color: #0062cc;
+    color: #0056b3; /* Biraz daha koyu mavi */
+    letter-spacing: 0.5px; /* Harf aralığı artışı */
+}
+
+.project-link:hover::after {
+    width: 100%;
 }
 
 .projects-button {
